@@ -7,46 +7,96 @@ while num1 == "0":
         num1 = float(input("Enter the first number:"))
     except ValueError:
         print("Only give numbers please!")
-while num2 == "0":
-    try:
-        num2 = float(input("Enter the second number(press 1 if you wanna find the square root):"))
-    except ValueError:
-        print("Only give numbers please!")
-if num2==1:
-        result = math.sqrt(num1)
-        print(f"The result is {result}")
-else:
- while Operator != "+" or "-" or "/" or "*":
-    Operator = str(input("Enter the operator(+,-,/,*,%,^):"))
-    if Operator == "+":
-                result = num1+num2
-                print(f"The result is {result}")
-                break
+while Operator != "+" or "-" or "/" or "*":
+    Operator = str(input("Enter the operator(+,-,/,*,%,^,√):"))
+    if Operator == "+":
+          while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")                 
+              else:  
+                  result = num1+float(num2)
+                  print(f"The result is {result}")
+                  break
+          break
     elif Operator == "-":
-               result = num1-num2
+        while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")   
+              else:  
+               result = num1-float(num2)
                print(f"The result is {result}")
-               break        
+               break
+        break
     elif Operator == "/":
-        try:
-            result=num1/num2
-            print(f"The result is {result}")
-            break
-        except ZeroDivisionError:
-            print("The result is ∞")
-            break
+        while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")   
+              else:  
+                  try:
+                     result=num1/float(num2)
+                     print(f"The result is {result}")
+                     break
+                  except ZeroDivisionError:
+                     print("The result is ∞")
+                     break
+        break
     elif Operator == "*":
-                result = num1 * num2
+        while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")   
+              else:  
+                result = num1 * float(num2)
                 print(f"The result is {result}")
                 break
+        break
     elif Operator == "%":
-                result = num1 % num2
+        while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")   
+              else:  
+                result = num1 % float(num2)
                 print(f"The result is {result}")
                 break
+        break
             
     elif Operator == "^":
-                 result = num1 ** num2
+        while num2 == "0":
+              try:
+                num2 = float(input("Enter the second number:"))
+              except ValueError:
+                  print("Only Enter Numbers please!")
+              except TypeError:
+                  print("Only Enter Numbers please!")   
+              else:  
+                 result = num1 ** float(num2)
                  print(f"The result is {result}")
                  break
+        break
+             
+    elif Operator == "√":
+                  result = math.sqrt(num1)
+                  print(result)
+                  break
     else:
                 print(f"{Operator} is not a valid operator")
 
