@@ -18,8 +18,7 @@ if num2==1:
 else:
  while Operator != "+" or "-" or "/" or "*":
     Operator = str(input("Enter the operator(+,-,/,*,%,^):"))
-    if Operator == "+":
-       while num2=="0":
+    if Operator == "+":
                 result = num1+num2
                 print(f"The result is {result}")
                 break
@@ -28,7 +27,6 @@ else:
                print(f"The result is {result}")
                break        
     elif Operator == "/":
-      while num2=="0":
         try:
             result=num1/num2
             print(f"The result is {result}")
@@ -37,30 +35,12 @@ else:
             print("The result is ∞")
             break
     elif Operator == "*":
-        while num2=="0":
-            try:
-                 num2 = float(input("Enter the second number:"))
-            except TypeError:
-                print("Only give numbers please!")
-            except ValueError:
-                print("Only give numbers please!")
-            try:
                 result = num1 * num2
                 print(f"The result is {result}")
-            finally:
                 break
     elif Operator == "%":
-        while num2=="0":
-            try:
-                 num2 = float(input("Enter the second number:"))
-            except TypeError:
-                print("Only give numbers please!")
-            except ValueError:
-                print("Only give numbers please!")
-            try:
                 result = num1 % num2
                 print(f"The result is {result}")
-            finally:
                 break
             
     elif Operator == "^":
