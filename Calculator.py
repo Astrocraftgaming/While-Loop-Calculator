@@ -8,7 +8,7 @@ while num1 == "0":
     except ValueError:
         print("Only give numbers please!")
 while Operator != "+" or "-" or "/" or "*":
-    Operator = str(input("Enter the operator(+,-,/,*,%,^,√):"))
+    Operator = str(input("Enter the operator(+,-,/,*,%,^,sqrt):"))
     if Operator == "+":
           while num2 == "0":
               try:
@@ -93,10 +93,12 @@ while Operator != "+" or "-" or "/" or "*":
                  break
         break
              
-    elif Operator == "√":
+    elif Operator == "sqrt":
                   result = math.sqrt(num1)
                   print(result)
                   break
     else:
-                print(f"{Operator} is not a valid operator")
+                print(f"{Operator} is not a valid operator")
+
+
 
