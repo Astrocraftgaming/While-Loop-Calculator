@@ -53,7 +53,7 @@ while Operator != "+" or "-" or "/" or "*":
                      print(f"The result is {result}")
                      break
                   except ZeroDivisionError:
-                     print("The result is ∞")
+                     print("Cant Divide By Zero")
                      break
         break
     elif Operator == "*":
