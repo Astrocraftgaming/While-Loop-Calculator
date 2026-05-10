@@ -6,11 +6,13 @@ num1 = "0"
 num2="0"
 restart = "0"
 restartTimes = "0"
+#Inputting The first number by using a while loop
 while num1 == "0":
     try:
         num1 = float(input("Enter the first number:"))
     except ValueError:
         print("Only give numbers please!")
+#Inputting 2nd number and operator in a while loop
 while Operator != "+" or "-" or "/" or "*":
     Operator = str(input("Enter the operator(+,-,/,*,%,^,sqrt):"))
     if Operator == "+":
@@ -103,6 +105,7 @@ while Operator != "+" or "-" or "/" or "*":
                   break
     else:
                 print(f"{Operator} is not a valid operator")
+#Restart the calculator
 Cal = "0"    
 while Cal != "0": 
     Cal = str(input("Want to Calculate another problem?(Y/n):"))
