@@ -32,6 +32,7 @@ def Calc():
                       result = num1+num2
                       print(f"The result is {result}")
                       Operator = "0"
+                      num1 = None
                       break
     #Subtracting
         case "-":
@@ -45,6 +46,7 @@ def Calc():
                    result = num1-float(num2)
                    print(f"The result is {result}")
                    Operator = "0"
+                   num1 = None
                    break
     #Dividing
         case "/":
@@ -57,11 +59,13 @@ def Calc():
                   except ZeroDivisionError:
                       print("Cant Divide By Zero")
                       Operator = "0"
+                      num1 = None
                       break
                   else:
                       result=num1/float(num2)
                       print(f"The result is {result}")
                       Operator = "0"
+                      num1 = None
                       break
     #Multiplying
         case "*":
@@ -75,6 +79,7 @@ def Calc():
                     result = num1 * float(num2)
                     print(f"The result is {result}")
                     Operator = "0"
+                    num1 = None
                     break
     #Calculation of modulus
         case "%":
@@ -88,6 +93,7 @@ def Calc():
                      result = num1 % float(num2)
                      print(f"The result is {result}")
                      Operator = "0"
+                     num1 = None
                      break
     #Calculations of power
         case "^":
@@ -101,12 +107,14 @@ def Calc():
                      result = num1 ** float(num2)
                      print(f"The result is {result}")
                      Operator = "0"
+                     num1 = None
                      break
     #square root calculations
         case "sqrt":
                       result = math.sqrt(num1)
                       print(result)
                       Operator = "0"
+                      num1 = None
                       break
 #Restart the calculator
 Calc()
@@ -120,3 +128,4 @@ while running:
             running=False
         case _:
             print("You entered an invalid option, try again")
+
